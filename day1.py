@@ -1,5 +1,4 @@
 import fileReader
-import math
 
 lines = fileReader.readFile("day1.txt")
 # Part 1
@@ -19,5 +18,8 @@ for  i, item in enumerate(leftList):
 print(totalDistance)
 
 # Part 2
-lBasket = {}
-rBasket = {}
+sim = 0
+for item in leftList:
+    sim += rightList.count(item)*int(item)
+
+print(sim)
